@@ -1,0 +1,16 @@
+{
+    "name": "HelloBot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "endpoint": "http://localhost:3978/api/messages",
+            "name": "HelloBot",
+            "id": "63"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "path": "C:\\Users\\derya\\source\\repos\\HelloBot\\HelloBot.bot",
+    "overrides": null
+}

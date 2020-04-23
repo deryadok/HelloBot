@@ -1,0 +1,19 @@
+{
+    "name": "HelloBot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "channelService": "",
+            "endpoint": "http://localhost:3978/api/messages",
+            "id": "64d02960-856b-11ea-9064-85e67e0a5cd1",
+            "name": "http://localhost:3978/api/messages"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "C:\\Users\\derya\\source\\repos\\HelloBot\\HelloBot.bot"
+}

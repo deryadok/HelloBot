@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using HelloBot.Bots;
+using HelloBot.Services;
 
 namespace HelloBot
 {
@@ -32,8 +33,18 @@ namespace HelloBot
             // Create the Bot Framework Adapter with error handling enabled.
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
 
+            ConfigureState(services);
+
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
-            services.AddTransient<IBot, EchoBot>();
+            services.AddTransient<IBot, GreetingBot>();
+        }
+
+        public void ConfigureState(IServiceCollection services)
+        {
+            services.AddSingleton<IStorage, MemoryStorage>();
+            services.AddSingleton<UserState>();
+            services.AddSingleton<ConversationState>();
+            services.AddSingleton<BotStateService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
